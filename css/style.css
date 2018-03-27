@@ -278,9 +278,9 @@ html {
   height: 6px;
   border-radius: 50%;
   background-color: #D8D8D8;
-  -webkit-transition: all 0.6s ease-in-out;
-  -o-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 
@@ -294,13 +294,13 @@ html {
   height: 6px;
   border-radius: 50%;
   background-color: #D8D8D8;
-  -webkit-transition: all 0.6s ease-in-out;
-  -o-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 /**
- * Для видимости навигации через табы
+ * Для видимости элемента при навигации через таб
  * 🍿
 
 .toggle__button:focus + .toggle__button-icon,
@@ -433,7 +433,7 @@ html {
 }
 
 /**
- * Для видимости навигации через табы
+ * Для видимости элемента при навигации через таб
  * 🍿
 
 .setting__checkbox:focus + .setting__label::after {
@@ -549,15 +549,19 @@ html {
   height: 20px;
 }
 
+/**
+  * Для видимости элемента при навигации через таб
+  * 🍿
+
 .btn--send-field:hover svg,
 .btn--send-field:focus svg {
   opacity: 0.6;
-  -webkit-filter: drop-shadow(0 0 8px #2EA6FF);
-  filter: drop-shadow(0 0 8px #2EA6FF);
 }
+*/
 
 .btn--send-field:active svg {
-  opacity: 0.3;
+  -webkit-filter: drop-shadow(0 0 8px #2EA6FF);
+  filter: drop-shadow(0 0 8px #2EA6FF);
 }
 
 /**
