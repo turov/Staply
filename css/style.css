@@ -353,7 +353,7 @@ html {
 .toggle__button ~ .toggle__dropdown-list {
   position: absolute;
   top: 47px;
-  right: -1000px;
+  right: -300px;
   width: 175px;
   border-radius: 6px;
   margin: 0;
@@ -580,6 +580,7 @@ html {
 }
 
 .chat-placeholder__image {
+  display: block;
   margin: 0 auto 32px;
 }
 
