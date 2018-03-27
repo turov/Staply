@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="page">
+
+<header class="header">
+
+  <div class="chat-heading">
+    <h1 class="chat-heading__title">Задание: простой чат</h1>
+    <p class="chat-heading__description">Количество участников безгранично</p>
+  </div>
+
+  <div class="toggle">
+    <input class="toggle__button visually-hidden" type="checkbox" id="toggle__button">
+    <label class="toggle__button-icon" for="toggle__button"><span class="visually-hidden">Настройки</span></label>
+    <ul class="toggle__dropdown-list">
+      <li class="toggle__dropdown-item setting">
+        <input class="setting__checkbox visually-hidden" type="checkbox" id="checkbox-1" checked>
+        <label class="setting__label" for="checkbox-1">Уведомления</label>
+      </li>
+      <li class="toggle__dropdown-item setting">
+        <input class="setting__checkbox visually-hidden" type="checkbox" id="checkbox-2">
+        <label class="setting__label" for="checkbox-2">Статус «В сети»</label>
+      </li>
+
+    </ul>
+  </div>
+</header>
+
+<main class="main">
+
+  <div class="message">
+    <img class="message__avatar" src="img/avatar-2@1x.jpg"
+         srcset="img/avatar-2@2x.jpg 2x"
+         width="38" height="38"
+         alt="аватар пользователя">
+    <div class="message__content">
+      <h6 class="message__name">Diana</h6>
+      <p class="message__text">Сам чат состоит из трех частей:<br>
+        - заголовка (его высота фиксирована), в котором указано название чата, количество участников и кнопка открытия
+        списка настроек чата;<br>
+        - зоны сообщений пользователей (зона сообщений занимает все свободное от заголовка и блока ввода сообщения
+        место, здесь же и присутствует вертикальный скролл), в которой отображаются сообщения пользователей с указанием
+        автора сообщения (аватарка и имя);<br>
+        - блока ввода сообщений (который растет по мере количества строк в сообщении пользователя, но ограничен
+        максимальной высотой)</p>
+    </div>
+  </div>
+
+  <div class="message">
+    <img class="message__avatar" src="img/avatar-1@1x.jpg"
+         srcset="img/avatar-1@2x.jpg 2x"
+         width="38" height="38"
+         alt="аватар пользователя">
+    <div class="message__content">
+      <h6 class="message__name">Sergio</h6>
+      <p class="message__text">Как вы уже поняли, на втором экране уже появляются сообщения и их может быть довольно
+        много.
+      </p>
+      <p class="message__text">Сообщения от одного и того же пользователя «слипаются» (чтобы занимать меньше места)</p>
+    </div>
+  </div>
+
+  <div class="message">
+    <img class="message__avatar" src="img/avatar-3@1x.jpg"
+         srcset="img/avatar-3@2x.jpg 2x"
+         width="38" height="38"
+         alt="аватар пользователя">
+    <div class="message__content">
+      <h6 class="message__name">Margo</h6>
+      <p class="message__text">Данные макеты должны быть сверстаны таким образом, чтобы отображаться на любых экранах в
+        полный размер (занимать всю ширину и высоту устройства)</p>
+      <p class="message__text">В этом состоянии отображен дропдаун с настройками. Он открывается по клику на иконку «три
+        точки» и закрывается по клику на иконку «крестик» (которую визуально пользователь видит на том же месте).</p>
+      <p class="message__text">Внутри дропдауна два пункта настроек, каждый из которых представляет себя переключатель
+        на 2 состояния.</p>
+      <p class="message__text">Напоминаем: никакого JS кода, реализовать требуется на чистом HTML+CSS. Анимирование
+        интерфейсов не обязательно, но вы можете проявить себя =)</p>
+    </div>
+  </div>
+
+  <div class="message">
+    <img class="message__avatar" src="img/avatar-4@1x.jpg"
+         srcset="img/avatar-4@2x.jpg 2x"
+         width="38" height="38"
+         alt="аватар пользователя">
+    <div class="message__content">
+      <h6 class="message__name">Ilya</h6>
+      <p class="message__text">Привет! Меню зовут Илья!</p>
+    </div>
+  </div>
+</main>
+
+<div class="send-field">
+  <div class="send-field__message" contentEditable="true" data-text="Сообщение..."></div>
+  <button class="btn btn--send-field">
+    <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 20v-7.566l15.133-2.184L0 8.066V.5l21.125 9.75z" fill="#B1C3D5" fill-rule="evenodd"/>
+    </svg>
+    <span class="visually-hidden">Отправить сообщение</span>
+  </button>
+</div>
+
+</body>
+</html>

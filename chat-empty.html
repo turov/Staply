@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="page">
+
+<header class="header">
+
+  <div class="chat-heading">
+    <h1 class="chat-heading__title">Задание: простой чат</h1>
+    <p class="chat-heading__description">Количество участников безгранично</p>
+  </div>
+
+  <div class="toggle">
+    <input class="toggle__button visually-hidden" type="checkbox" id="toggle__button">
+    <label class="toggle__button-icon" for="toggle__button"><span class="visually-hidden">Настройки</span></label>
+    <ul class="toggle__dropdown-list">
+      <li class="toggle__dropdown-item setting">
+        <input class="setting__checkbox visually-hidden" type="checkbox" id="checkbox-1" checked>
+        <label class="setting__label" for="checkbox-1">Уведомления</label>
+      </li>
+      <li class="toggle__dropdown-item setting">
+        <input class="setting__checkbox visually-hidden" type="checkbox" id="checkbox-2">
+        <label class="setting__label" for="checkbox-2">Статус «В сети»</label>
+      </li>
+
+    </ul>
+  </div>
+</header>
+
+<main class="main">
+
+  <div class="chat-placeholder">
+    <img class="chat-placeholder__image" src="img/placeholder.svg" width="115" height="115" alt="пустое состояние чата">
+    <p class="chat-placeholder__text">Это пустое состояние чата</p>
+    <p class="chat-placeholder__text">(данная заглушка из картинки и этого текста должна отображаться по центру зоны
+      сообщений пользователей)</p>
+  </div>
+
+</main>
+
+<div class="send-field">
+  <div class="send-field__message" contentEditable="true" data-text="Сообщение..."></div>
+  <button class="btn btn--send-field">
+    <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 20v-7.566l15.133-2.184L0 8.066V.5l21.125 9.75z" fill="#B1C3D5" fill-rule="evenodd"/>
+    </svg>
+    <span class="visually-hidden">Отправить сообщение</span>
+  </button>
+</div>
+
+</body>
+</html>
+
+
