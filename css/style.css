@@ -516,7 +516,7 @@ html {
   max-height: 144px;
   font-size: 13px;
   line-height: 18px;
-  overflow: scroll;
+  overflow: auto;
   cursor: text;
   outline: none;
 }
