@@ -204,21 +204,26 @@ html {
 }
 
 .page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  max-height: 100vh;
   font-family: 'Open Sans', Arial, sans-serif;
   color: #D8D8D8;
   background: #19222D;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 .header {
-  position: fixed;
-  top: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-shrink: 0;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
@@ -455,8 +460,10 @@ html {
  */
 
 .main {
-  padding: 9px 4.3%;
-  margin: 58px 0 41px;
+  flex-grow: 1;
+  padding: 16px 4.3% 9px;
+  margin: 0;
+  overflow-y: scroll;
 }
 
 .message {
@@ -482,7 +489,7 @@ html {
 }
 
 .message__text {
-  margin: 0 0 10px;
+  margin: 0 0 11px;
 }
 
 /**
@@ -491,32 +498,32 @@ html {
  */
 
 .send-field {
-  position: fixed;
-  bottom: 0;
   width: 100%;
+  min-height: 51px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-shrink: 0;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+  align-items: center;
   border-top: 1px solid #2A3E53;
-  padding: 13px 4.3% 17px;
+  padding: 10px 4.3% 11px;
   background: #19222D;
+  overflow-y: hidden;
 }
 
 .send-field__message {
   width: 100%;
-  max-height: 144px;
+  max-height: 143px;
   font-size: 13px;
   line-height: 18px;
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: scroll;
   cursor: text;
   outline: none;
 }
@@ -531,11 +538,14 @@ html {
  */
 
 .btn--send-field {
+  align-self: flex-end;
+  margin-bottom: 4px;
   position: relative;
   width: 22px;
   height: 20px;
   border: none;
-  margin-left: 16px;
+  margin-left: 15px;
+  margin-right: 1px;
   background: transparent;
   cursor: pointer;
   outline: none;
