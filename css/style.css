@@ -522,8 +522,7 @@ html {
   max-height: 143px;
   font-size: 13px;
   line-height: 18px;
-  overflow-x: auto;
-  overflow-y: scroll;
+  overflow: auto;
   cursor: text;
   outline: none;
 }
