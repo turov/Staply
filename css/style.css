@@ -357,8 +357,9 @@ html {
 
 .toggle__button ~ .toggle__dropdown-list {
   position: absolute;
+  transform: translateX(300px);
   top: 47px;
-  right: -300px;
+  right: -6px;
   width: 175px;
   border-radius: 6px;
   margin: 0;
@@ -373,7 +374,7 @@ html {
 }
 
 .toggle .toggle__button:checked ~ .toggle__dropdown-list {
-  right: -6px;
+  transform: translateX(0);
 }
 
 /**
