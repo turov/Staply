@@ -226,6 +226,9 @@ html {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -245,6 +248,7 @@ html {
   border-bottom: 1px solid #2A3E53;
   padding: 9px 4.3%;
   background: #19222D;
+  overflow: hidden;
 }
 
 .chat-heading {
@@ -365,11 +369,8 @@ html {
 
 .toggle__button ~ .toggle__dropdown-list {
   position: absolute;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
   top: 47px;
-  right: -6px;
+  right: 300px;
   width: 175px;
   border-radius: 6px;
   margin: 0;
@@ -384,9 +385,7 @@ html {
 }
 
 .toggle .toggle__button:checked ~ .toggle__dropdown-list {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
+  right: -6px;
 }
 
 /**
@@ -477,7 +476,7 @@ html {
   -ms-flex-positive: 1;
   flex-grow: 1;
   padding: 16px 4.3% 9px;
-  margin: 0;
+  margin: 51px 0 0;
   overflow-y: scroll;
 }
 
