@@ -204,8 +204,15 @@ html {
 }
 
 .page {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   min-height: 100vh;
   max-height: 100vh;
@@ -223,6 +230,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -357,7 +365,9 @@ html {
 
 .toggle__button ~ .toggle__dropdown-list {
   position: absolute;
-  transform: translateX(300px);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
   top: 47px;
   right: -6px;
   width: 175px;
@@ -374,7 +384,9 @@ html {
 }
 
 .toggle .toggle__button:checked ~ .toggle__dropdown-list {
-  transform: translateX(0);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
 /**
@@ -461,10 +473,25 @@ html {
  */
 
 .main {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   padding: 16px 4.3% 9px;
   margin: 0;
   overflow-y: scroll;
+}
+
+.main--empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .message {
@@ -504,6 +531,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -511,6 +539,8 @@ html {
   flex-direction: row;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   border-top: 1px solid #2A3E53;
   padding: 10px 4.3% 11px;
@@ -538,6 +568,7 @@ html {
  */
 
 .btn--send-field {
+  -ms-flex-item-align: end;
   align-self: flex-end;
   margin-bottom: 4px;
   position: relative;
@@ -580,13 +611,8 @@ html {
  */
 
 .chat-placeholder {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 80%;
+  width: 90%;
+  margin: auto;
 }
 
 .chat-placeholder__image {
